@@ -17,6 +17,8 @@ def authorize_key_for_root(config, *key_paths)
         run: 'once',
         inline:
           "echo \"Creating /root/.ssh/authorized_keys with #{key_path}\" && " +
+          'mkdir -p /root/.ssh/ && ' +
+          'touch  /root/.ssh/authorized_keys && ' +
           'rm -f /root/.ssh/authorized_keys && ' +
           'mv /home/vagrant/root_pubkey /root/.ssh/authorized_keys && ' +
           'chown root:root /root/.ssh/authorized_keys && ' +
