@@ -1,5 +1,5 @@
-swarm-01 ansible_ssh_host=node1.myapp.dev
-swarm-02 ansible_ssh_host=node2.myapp.dev
+swarm-01 ansible_ssh_host=95.217.215.168 ansible_user=root ansible_become=yes
+swarm-02 ansible_ssh_host=95.217.176.33 ansible_user=root ansible_become=yes
 
 [docker_engine]
 swarm-01
