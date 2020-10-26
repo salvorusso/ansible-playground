@@ -28,6 +28,6 @@ steps:
     targetType: 'inline'
     script: |
       ls
-      ansible-lint playbook localPlaybook.yaml
+      ansible-lint -v playbook localPlaybook.yaml
     failOnStderr: true
   displayName: Playbook Linting
