@@ -26,11 +26,5 @@ steps:
 - task: Bash@3
   inputs:
     targetType: 'inline'
-    script: |
-      pwd
-      ls
-
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: 'ansible-lint playbook $(Build.SourcesDirectory)/localPlaybook.yml'
+    script: 'ansible-lint playbook localPlaybook.yaml'
+  displayName: Playbook Linting
