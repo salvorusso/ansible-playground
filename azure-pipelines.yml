@@ -28,11 +28,11 @@ steps:
     targetType: 'inline'
     script: 'ansible-galaxy role install atosatto.docker-swarm'
   displayName: Install required role
+
 - task: Bash@3
   inputs:
     targetType: 'inline'
     script: |
-      ls
-      ansible-lint -v playbook localPlaybook.yaml
+      ansible-lint localPlaybook.yaml
     failOnStderr: true
   displayName: Playbook Linting
